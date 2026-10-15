@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A scrollytelling data story about sunburn awareness, reported sunscreen use, product priorities, and outdoor experience.">
+  <title>A Day in the Sun</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='9' fill='%23f4c84b'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css?v=20261015">
+  <link rel="stylesheet" href="interactions.css?v=20261015final">
+  <script src="script.js?v=20261015c" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#story">Skip to the story</a>
+  <div class="reading-progress" aria-hidden="true"><span></span></div>
+
+  <header class="site-header">
+    <a class="wordmark" href="#top">A Day in the Sun</a>
+    <nav aria-label="Page navigation">
+      <a href="output/pdf/A-Day-in-the-Sun.pdf">PDF</a>
+      <a href="#data-table">Data</a>
+      <a href="#methods">Methods</a>
+      <button class="motion-toggle" type="button" aria-pressed="false">Pause motion</button>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="chapter-label">An interactive field guide to sun protection</p>
+        <h1 id="hero-title">A Day<br>in the <span>Sun</span></h1>
+        <p class="hero-question">What shapes whether sun protection fits into a day outdoors?</p>
+        <p class="hero-support">A survey of 7,599 U.S. adults offers a starting point: what people believe, how often they report using sunscreen, and which practical concerns matter to them.</p>
+        <p class="scene-note">The beach is an illustrated setting. The survey was not limited to beachgoers.</p>
+        <a class="start-story" href="#first-thought"><span>Step onto the beach</span><span aria-hidden="true">↓</span></a>
+        <p class="reading-time">A 5-minute story. Scroll, make a guess, explore.</p>
+      </div>
+
+      <div class="hero-scene">
+        <img class="beach-illustration" src="assets/beach-friends.png" alt="" width="1122" height="1402" fetchpriority="high">
+        <span class="scene-sun" aria-hidden="true">✳</span>
+        <a class="beach-question question-one" href="#chapter-harm"><span>01</span> What do we know?</a>
+        <a class="beach-question question-two" href="#chapter-reapply"><span>03</span> What gets in the way?</a>
+        <a class="beach-question question-three" href="#chapter-priorities"><span>04</span> What matters to you?</a>
+      </div>
+      <div class="hero-wave" aria-hidden="true"></div>
+    </section>
+
+    <section class="first-thought" id="first-thought" aria-labelledby="guess-title">
+      <div class="guess-copy">
+        <p class="chapter-label">Before we look at the data</p>
+        <h2 id="guess-title">Knowing the risk.<br>Doing the routine.</h2>
+        <p>Imagine adults who recognize the long-term harm of sunburn. What percentage use sunscreen on their face <strong>most of the time or always</strong>?</p>
+        <p class="annotation">Make a guess, then compare it with the survey. Your answer stays on this page and is not collected.</p>
+      </div>
+      <div class="guess-playground">
+        <div class="guess-heading"><label for="guess-range">Your guess</label><output id="guess-output" for="guess-range">50%</output></div>
+        <div class="guess-dots" aria-hidden="true"></div>
+        <input id="guess-range" type="range" min="0" max="100" value="50" step="1" aria-describedby="guess-hint">
+        <div class="range-ends" aria-hidden="true"><span>0%</span><span>100%</span></div>
+        <p id="guess-hint">Drag the sun to make your guess.</p>
+        <div class="guess-actions"><button type="button" class="reveal-answer">Reveal the survey result <span aria-hidden="true">↗</span></button><button type="button" class="reset-guess" hidden>Try again</button></div>
+        <div class="guess-result" aria-live="polite" hidden></div>
+      </div>
+    </section>
+
+    <section class="story-intro" id="story">
+      <p class="chapter-label">One survey. Five ways into the question.</p>
+      <h2>We know the risk.<br><span>Life is the complicated part.</span></h2>
+      <p class="intro-caption">Follow the survey from recognition to routine, then back to a day outdoors.</p>
+      <a href="#chapter-harm" class="intro-arrow" aria-label="Begin the survey story">↓</a>
+    </section>
+
+    <nav class="chapter-nav" aria-label="Story chapters">
+      <a href="#chapter-harm" data-chapter="harm"><span>01</span> Awareness</a>
+      <a href="#chapter-use" data-chapter="use"><span>02</span> Routine</a>
+      <a href="#chapter-reapply" data-chapter="reapply"><span>03</span> Friction</a>
+      <a href="#chapter-priorities" data-chapter="priorities"><span>04</span> Priorities</a>
+      <a href="#chapter-association" data-chapter="association"><span>05</span> Connection</a>
+    </nav>
+
+    <section class="scrolly" aria-label="Survey findings">
+      <div class="steps">
+        <article class="step" id="chapter-harm" data-scene="harm" aria-labelledby="harm-title">
+          <div class="step-copy">
+            <p class="chapter-label">Recognizing harm</p>
+            <h2 id="harm-title">The risk is<br>not a secret.</h2>
+            <p class="lead-stat">82.0%</p>
+            <p>82.0% disagree that sunburn is not really harmful in the long run.</p>
+            <p class="denominator-note">Base: all valid responses to this item, n = 7,510.</p>
+            <p class="annotation">Each icon represents approximately one percentage point, not one survey respondent. The icon count is rounded while the displayed estimate remains exact.</p>
+          </div>
+          <div class="mobile-visual" data-mobile-scene="harm"></div>
+        </article>
+
+        <article class="step" id="chapter-use" data-scene="use" aria-labelledby="use-title">
+          <div class="step-copy">
+            <p class="chapter-label">Reported use</p>
+            <h2 id="use-title">Knowing and doing<br>are different things.</h2>
+            <div class="inline-stats" aria-label="Frequent sunscreen use estimates">
+              <p><span>Face</span><strong>31.1%</strong></p>
+              <p><span>Other exposed skin</span><strong>27.6%</strong></p>
+            </div>
+            <p>Frequent use means “most of the time” or “always.”</p>
+            <p class="denominator-note">The population resets here. This chapter is among adults who recognize the long-term harm of sunburn, not the full sample. Valid n: face 6,276; other exposed skin 6,273.</p>
+          </div>
+          <div class="mobile-visual" data-mobile-scene="use" ></div>
+        </article>
+
+        <article class="step" id="chapter-reapply" data-scene="reapply" aria-labelledby="reapply-title">
+          <div class="step-copy">
+            <p class="chapter-label">Reapplication</p>
+            <h2 id="reapply-title">Reapplication can feel like a hassle.</h2>
+            <p class="lead-stat coral">60.6%</p>
+            <p>60.6% agree that reapplying sunscreen is a hassle.</p>
+            <p class="annotation">The survey identifies the reported hassle. It does not tell us whether sand, swimming, time, or another circumstance explains it.</p>
+            <p class="denominator-note">Base: all valid responses to this item, n = 7,479.</p>
+            <p class="bridge">What people want from a sunscreen is another part of the picture.</p>
+          </div>
+          <div class="mobile-visual" data-mobile-scene="reapply" ></div>
+        </article>
+
+        <article class="step" id="chapter-priorities" data-scene="priorities" aria-labelledby="priorities-title">
+          <div class="step-copy">
+            <p class="chapter-label">Inside the beach bag</p>
+            <h2 id="priorities-title">What goes into<br>your beach bag?</h2>
+            <p>Start with the feature that matters to you. Tap a label on the bag or a row to see how adults rated it. Each consideration was rated independently.</p>
+            <p class="annotation">“Spray application” measures the importance of being able to spray sunscreen onto the skin. It is not a spray-use rate.</p>
+          </div>
+          <div class="mobile-visual" data-mobile-scene="priorities" ></div>
+        </article>
+
+        <article class="step" id="chapter-association" data-scene="association" aria-labelledby="association-title">
+          <div class="step-copy">
+            <p class="chapter-label">From priorities to use</p>
+            <h2 id="association-title">A priority is not<br>yet a routine.</h2>
+            <p>Adults who place greater importance on ingredients report more frequent use. Still, 64.9% of this group report using face sunscreen never, rarely, or sometimes.</p>
+            <p class="annotation">The survey shows an association. Ingredient importance is not product quality or satisfaction, and the comparison does not establish causation.</p>
+            <p class="bridge">We still need to understand how these priorities play out during outdoor activities.</p>
+          </div>
+          <div class="mobile-visual" data-mobile-scene="association" ></div>
+        </article>
+      </div>
+
+      <div class="stage-column">
+        <div class="sticky-stage" id="sticky-stage"><p class="stage-chapter" aria-hidden="true">01 / Awareness</p><div class="stage-footprints" aria-hidden="true">· · · · · · · · · ·</div></div>
+      </div>
+    </section>
+
+    <section class="closing" aria-labelledby="closing-title">
+      <div class="closing-scene" aria-hidden="true">
+        <img class="beach-illustration" src="assets/beach-friends.png" alt="" width="1122" height="1402" loading="lazy">
+      </div>
+      <div class="closing-copy">
+        <p class="chapter-label">Back to outdoor experience</p>
+        <h2 id="closing-title">What happens between choosing a product and spending time outdoors?</h2>
+
+        <div class="research-block">
+          <h3>Research participants</h3>
+          <p>Adults who enjoy outdoor activities and have experienced sunburn.</p>
+        </div>
+
+        <div class="research-question">
+          <h3>Primary research question</h3>
+          <p>How do adults who enjoy outdoor activities and have experienced sunburn decide whether and how to protect themselves from sun exposure?</p>
+        </div>
+
+        <div class="research-block">
+          <h3>Design aim to explore</h3>
+          <p>Support enjoyable outdoor experiences while reducing the risk of sunburn.</p>
+        </div>
+
+        <p class="annotation">Sunburn history and outdoor enjoyment were not measured in this survey. This group is a focus for primary research.</p>
+        <div class="closing-links">
+          <a href="#methods">Read the methods</a>
+          <a href="#story">Revisit the data</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="data-access" id="data-table" aria-labelledby="data-title">
+      <h2 id="data-title">The data in text</h2>
+      <p>All estimates are weighted using WEIGHT_M1. Each n is the unweighted number of valid respondents for that analysis.</p>
+      <details>
+        <summary>Open the accessible data table</summary>
+        <div class="table-wrap" tabindex="0">
+          <table>
+            <caption>Values visualized in A Day in the Sun</caption>
+            <thead>
+              <tr><th scope="col">Measure</th><th scope="col">Estimate</th><th scope="col">Valid n</th><th scope="col">Definition</th></tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Recognizes long-term harm</th><td>82.0%</td><td>7,510</td><td>SUN_NOHARM responses 1-2 among valid responses 1-4</td></tr>
+              <tr><th scope="row">Frequent face use among adults recognizing harm</th><td>31.1%</td><td>6,276</td><td>SUN_USEFACE responses 3-4 within the SUN_NOHARM 1-2 group</td></tr>
+              <tr><th scope="row">Frequent other exposed skin use among adults recognizing harm</th><td>27.6%</td><td>6,273</td><td>SUN_USESKIN responses 3-4 within the SUN_NOHARM 1-2 group</td></tr>
+              <tr><th scope="row">Reapplication is a hassle</th><td>60.6%</td><td>7,479</td><td>SUN_REAPPLY responses 3-4 among valid responses 1-4</td></tr>
+              <tr><th scope="row">Ingredients moderately or very important</th><td>62.5%</td><td>7,477</td><td>SUN_INGRED responses 2-3 among valid responses 0-3</td></tr>
+              <tr><th scope="row">Affordability moderately or very important</th><td>55.4%</td><td>7,502</td><td>SUN_AFFORD responses 2-3 among valid responses 0-3</td></tr>
+              <tr><th scope="row">Feel on skin moderately or very important</th><td>54.7%</td><td>7,479</td><td>SUN_FEEL responses 2-3 among valid responses 0-3</td></tr>
+              <tr><th scope="row">Spray application moderately or very important</th><td>37.6%</td><td>7,472</td><td>SUN_SPRAY responses 2-3 among valid responses 0-3</td></tr>
+              <tr><th scope="row">Frequent face use, ingredients not or slightly important</th><td>19.3%</td><td>2,696</td><td>SUN_USEFACE responses 3-4 within SUN_INGRED 0-1</td></tr>
+              <tr><th scope="row">Frequent face use, ingredients moderately or very important</th><td>35.1%</td><td>4,759</td><td>SUN_USEFACE responses 3-4 within SUN_INGRED 2-3</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </details>
+    </section>
+
+    <section class="methods" id="methods" aria-labelledby="methods-title">
+      <div>
+        <h2 id="methods-title">Methods and limits</h2>
+        <p>Source: CDC/NCHS Rapid Surveys System, Round 1, August 2023. Total sample: 7,599 U.S. adults. Analysis weight: WEIGHT_M1.</p>
+        <p>All percentages apply the analysis weight to valid responses for the specified measure or subgroup. Missing, refused, and unknown responses are excluded from each denominator.</p>
+        <p>The use questions refer to being outdoors in the sun during warm weather. Face use excludes makeup or moisturizer containing sunscreen.</p>
+      </div>
+      <div>
+        <h3>Interpretation</h3>
+        <p>This is a cross-sectional self-report survey. It cannot establish individual change over time, causal effects, actual reapplication counts, shade use, sunburn occurrence, or product effectiveness.</p>
+        <p>Confidence intervals and significance tests are not shown. Differences are descriptive. Coverage and nonresponse bias may remain after weighting.</p>
+        <p>Beach characters are decorative illustrations, not respondents. The 100-icon arrays represent rounded percentages; skin color never encodes data.</p>
+        <a class="source-link" href="https://www.cdc.gov/nchs/data/rss/codebook.pdf" target="_blank" rel="noreferrer">Official codebook</a>
+        <a class="source-link" href="https://www.cdc.gov/nchs/data/rss/rss1_puf_t1.csv">Public-use dataset (CSV)</a>
+        <a class="source-link" href="https://www.cdc.gov/nchs/data/rss/survey-description.pdf">Survey design and weighting</a>
+        <a class="source-link" href="https://www.cdc.gov/nchs/rss/round1/sunscreen.html">CDC sunscreen overview</a>
+      </div>
+    </section>
+    <section class="design-process" aria-labelledby="design-title">
+      <p class="chapter-label">Behind the visualization</p>
+      <h2 id="design-title">A beach story, grounded in survey data.</h2>
+      <p class="process-intro">This existing dataset connects beliefs, reported sunscreen use, and purchase considerations to a thesis about enjoyable outdoor experiences. It offers patterns to investigate through interviews, rather than explanations for individual choices.</p>
+      <div class="process-grid">
+        <article><span>01 / PROPORTION</span><h3>100-icon arrays</h3><p>Make the share of adults easy to grasp. A fresh array marks the subgroup change; exact labels accompany rounded icon counts.</p></article>
+        <article><span>02 / COMPARISON</span><h3>Aligned bars</h3><p>Make product priorities and subgroup differences easier to compare. Separate ratings are not parts of one whole, so a pie chart would mislead.</p></article>
+        <article><span>03 / NARRATIVE</span><h3>Scroll-led sequence</h3><p>An estimate-and-reveal interaction, response regrouping, and chapter transitions let readers explore the findings. A funnel was not selected because these data do not track people over time.</p></article>
+      </div>
+      <p class="interaction-references">Interaction references: <a href="https://pudding.cool/2026/06/love-story/">The Pudding: A Love Story</a> and <a href="https://pudding.cool/2026/05/kpop-generations/">Growing Up With K-Pop</a>. Original artwork and story retained for this project.</p>
+      <p class="process-credit">Illustration: AI-generated for this project using user-supplied visual references. Decorative scene only.</p>
+      <a class="document-link" href="output/pdf/A-Day-in-the-Sun.pdf">View the presentation PDF <span aria-hidden="true">↗</span></a>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>A Day in the Sun</p>
+    <p>CDC/NCHS RSS, Round 1, August 2023</p>
+  </footer>
+
+  <div class="visual-library" id="visual-library" hidden>
+    <section class="visual-panel harm-panel" data-visual="harm">
+      <div class="stage-sand"></div>
+      <div class="stage-water"></div>
+      <div class="visual-heading">
+        <p>Disagree that sunburn is not really harmful in the long run</p>
+        <strong>82.0%</strong>
+      </div>
+      <div class="people-grid" data-grid="harm"></div>
+      <div class="legend"><span class="legend-mark yellow"></span><span>Recognizes long-term harm</span><span class="legend-mark muted"></span><span>Other valid response</span></div>
+      <p class="visual-note">100 rounded percentage marks. Not individual respondents.</p>
+    </section>
+
+    <section class="visual-panel use-panel" data-visual="use" data-mode="face">
+      <div class="stage-sand"></div>
+      <div class="stage-water narrow"></div>
+      <p class="population-label">Among adults who recognize the long-term harm of sunburn</p>
+      <div class="segmented-control" role="group" aria-label="Choose body area">
+        <button type="button" class="active" data-use-mode="face" aria-pressed="true">Face</button>
+        <button type="button" data-use-mode="skin" aria-pressed="false">Other exposed skin</button>
+      </div>
+      <div class="use-stat"><span data-use-label>Face</span><strong data-use-value>31.1%</strong></div>
+      <div class="people-grid" data-grid="use"></div>
+      <div class="legend"><span class="legend-mark purple"></span><span>Most of the time or always</span><span class="legend-mark muted"></span><span>Never, rarely, or sometimes</span></div>
+      <p class="visual-note">100 percentage marks within this subgroup. Toggle the view to separate the two responses.</p>
+    </section>
+
+    <section class="visual-panel reapply-panel" data-visual="reapply">
+      <div class="stage-sand"></div>
+      <div class="object-scene">
+        <svg viewBox="0 0 600 360" role="img" aria-label="Illustrated beach bag, towel, and sunscreen bottle">
+          <g class="towel" transform="translate(35 120) rotate(-7)">
+            <rect width="270" height="145" fill="#f4c84b"></rect>
+            <path d="M30 0v145M78 0v145M126 0v145M174 0v145M222 0v145" stroke="#fff8e8" stroke-width="10"></path>
+          </g>
+          <g class="bag" transform="translate(300 96) rotate(5)">
+            <path d="M10 54h190l-17 190H30Z" fill="#6656e8"></path>
+            <path d="M55 65c0-74 98-74 98 0" fill="none" stroke="#182e32" stroke-width="16"></path>
+            <path d="M45 110h120" stroke="#e86a54" stroke-width="12"></path>
+          </g>
+          <g class="bottle" transform="translate(226 190) rotate(-5)">
+            <rect y="22" width="72" height="145" rx="8" fill="#fff8e8" stroke="#182e32" stroke-width="6"></rect>
+            <rect x="20" width="32" height="30" rx="3" fill="#182e32"></rect>
+            <circle cx="36" cy="92" r="24" fill="#e86a54"></circle>
+          </g>
+        </svg>
+      </div>
+      <div class="ratio-figure">
+        <strong>60.6%</strong>
+        <div class="ratio-line"><span style="width:60.6%"></span></div>
+        <p>Agree that reapplying sunscreen is a hassle</p>
+      </div>
+    </section>
+
+    <section class="visual-panel priorities-panel" data-visual="priorities" data-priority="ingredients">
+      <div class="stage-sand"></div>
+      <div class="product-figure">
+        <svg viewBox="0 0 330 330" aria-hidden="true">
+          <path class="priority-shape priority-affordability" d="M32 69h194l-17 215H54Z" fill="#6656e8"></path>
+          <path d="M80 75c0-72 102-72 102 0" fill="none" stroke="#182e32" stroke-width="15"></path>
+          <rect class="priority-shape priority-feel" x="189" y="104" width="92" height="174" rx="10" fill="#fff8e8" stroke="#182e32" stroke-width="6"></rect>
+          <rect x="217" y="76" width="37" height="38" rx="4" fill="#182e32"></rect>
+          <circle class="priority-shape priority-ingredients" cx="235" cy="181" r="38" fill="#f4c84b"></circle>
+          <path class="priority-shape priority-spray" d="M236 85c35-34 62-29 75-4" fill="none" stroke="#e86a54" stroke-width="12" stroke-linecap="round"></path>
+          <circle cx="305" cy="78" r="8" fill="#e86a54"></circle>
+        </svg>
+        <p data-priority-description>The importance of what is in the sunscreen.</p>
+      </div>
+      <div class="priority-bars" role="group" aria-label="Sunscreen purchase considerations">
+        <button type="button" class="priority-row active" data-priority="ingredients" aria-pressed="true">
+          <span>Ingredients</span><span class="bar"><i style="width:62.5%"></i></span><strong>62.5%</strong>
+        </button>
+        <button type="button" class="priority-row" data-priority="affordability" aria-pressed="false">
+          <span>Affordability</span><span class="bar"><i style="width:55.4%"></i></span><strong>55.4%</strong>
+        </button>
+        <button type="button" class="priority-row" data-priority="feel" aria-pressed="false">
+          <span>Feel on skin</span><span class="bar"><i style="width:54.7%"></i></span><strong>54.7%</strong>
+        </button>
+        <button type="button" class="priority-row" data-priority="spray" aria-pressed="false">
+          <span>Spray application</span><span class="bar"><i style="width:37.6%"></i></span><strong>37.6%</strong>
+        </button>
+      </div>
+      <p class="visual-note">Moderately or very important. Separate valid-response bases: ingredients n = 7,477; affordability 7,502; feel 7,479; spray 7,472.</p>
+    </section>
+
+    <section class="visual-panel association-panel" data-visual="association">
+      <div class="stage-sand"></div>
+      <p class="population-label">Frequent face sunscreen use, by importance of ingredients</p>
+      <div class="comparison-chart" role="img" aria-label="Frequent face sunscreen use is 19.3 percent among adults who rate ingredients not or slightly important and 35.1 percent among adults who rate ingredients moderately or very important">
+        <div class="comparison-row">
+          <p>Not or slightly important</p>
+          <div class="comparison-bar"><span style="width:48.25%"></span></div>
+          <strong>19.3%</strong>
+        </div>
+        <div class="comparison-row emphasized">
+          <p>Moderately or very important</p>
+          <div class="comparison-bar"><span style="width:87.75%"></span></div>
+          <strong>35.1%</strong>
+        </div>
+        <div class="axis"><span>0</span><span>20%</span><span>40%</span></div>
+      </div>
+      <div class="association-note">
+        <strong>64.9%</strong>
+        <p>of the higher-importance group report using face sunscreen never, rarely, or sometimes.</p>
+      </div>
+      <p class="visual-note">Same 0-40% scale. Valid n: lower importance 2,696; higher importance 4,759. Descriptive estimates; no significance test.</p>
+    </section>
+  </div>
+</body>
+</html>

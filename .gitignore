@@ -1,0 +1,4 @@
+tmp/
+.impeccable/
+.DS_Store
+__pycache__/

@@ -1,0 +1,72 @@
+[
+  {
+    "variable": "SUN_NOHARM",
+    "subgroup": "None",
+    "percent": 81.98506818690365,
+    "valid_n": 7510,
+    "passed": true
+  },
+  {
+    "variable": "SUN_USEFACE",
+    "subgroup": "('SUN_NOHARM', {1, 2})",
+    "percent": 31.0750168371386,
+    "valid_n": 6276,
+    "passed": true
+  },
+  {
+    "variable": "SUN_USESKIN",
+    "subgroup": "('SUN_NOHARM', {1, 2})",
+    "percent": 27.550716311161636,
+    "valid_n": 6273,
+    "passed": true
+  },
+  {
+    "variable": "SUN_REAPPLY",
+    "subgroup": "None",
+    "percent": 60.64657259426333,
+    "valid_n": 7479,
+    "passed": true
+  },
+  {
+    "variable": "SUN_INGRED",
+    "subgroup": "None",
+    "percent": 62.45552522668983,
+    "valid_n": 7477,
+    "passed": true
+  },
+  {
+    "variable": "SUN_AFFORD",
+    "subgroup": "None",
+    "percent": 55.382003746343536,
+    "valid_n": 7502,
+    "passed": true
+  },
+  {
+    "variable": "SUN_FEEL",
+    "subgroup": "None",
+    "percent": 54.67581659540102,
+    "valid_n": 7479,
+    "passed": true
+  },
+  {
+    "variable": "SUN_SPRAY",
+    "subgroup": "None",
+    "percent": 37.57008442684743,
+    "valid_n": 7472,
+    "passed": true
+  },
+  {
+    "variable": "SUN_USEFACE",
+    "subgroup": "('SUN_INGRED', {0, 1})",
+    "percent": 19.256115738046915,
+    "valid_n": 2696,
+    "passed": true
+  },
+  {
+    "variable": "SUN_USEFACE",
+    "subgroup": "('SUN_INGRED', {2, 3})",
+    "percent": 35.08018583325391,
+    "valid_n": 4759,
+    "passed": true
+  }
+]
